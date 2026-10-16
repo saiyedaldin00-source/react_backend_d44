@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDb = async () => {
     try {
-        const url=process.env.MONGODB_URI === true
+        const url=process.env.USE_URI === true
         ? process.env.MONGODB_URI_PROXY
         : process.env.MONGODB_URI
         const conn = await mongoose.connect(url)
